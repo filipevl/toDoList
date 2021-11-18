@@ -4,7 +4,8 @@
   "description": "Simple API Rest to Create, read, update and delete task in database",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "sequelize": "^6.9.0"
   },
   "devDependencies": {
+    "nodemon": "^2.0.15",
     "sequelize-cli": "^6.3.0"
   }
 }
