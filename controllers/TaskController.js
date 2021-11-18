@@ -1,27 +1,27 @@
 const TaskCrudService = require("../services/TaskCrudService");
 
 class TaskController {
-	listAll = (req, res) => {
-		const tasks = TaskCrudService.select();
-		res.json(tasks);
+	listAll = async (req, res) => {
+		const response = await TaskCrudService.select();
+		return res.status(response.status).json(response.data);
 	};
-	listOne = (req, res) => {
-		const task = TaskCrudService.select(req.params.taskId);
-		res.json(task);
+	listOne = async (req, res) => {
+		const response = await TaskCrudService.select(req.params.taskId);
+		return res.status(response.status).json(response.data);
 	};
-	create = (req, res) => {
+	create = async (req, res) => {
 		const { name, description, file } = req.body;
-		const task = TaskCrudService.create(name, description, file);
-		res.json(task);
+		const response = await TaskCrudService.create(name, description, file);
+		return res.status(response.status).json(response.data);
 	};
-	update = (req, res) => {
+	update = async (req, res) => {
 		const { name, description, file } = req.body;
-		const tasks = TaskCrudService.update(req.params.taskId, name, description, file);
-		res.json(tasks);
+		const response = await TaskCrudService.update(req.params.taskId, name, description, file);
+		return res.status(response.status).json(response.data);
 	};
-	delete = (req, res) => {
-		const task = TaskCrudService.delete(req.params.taskId);
-		res.json(task);
+	delete = async (req, res) => {
+		const response = await TaskCrudService.delete(req.params.taskId);
+		return res.status(response.status).json(response.data);
 	};
 }
 
