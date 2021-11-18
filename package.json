@@ -1,0 +1,31 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "Simple API Rest to Create, read, update and delete task in database",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filipevl/toDoList.git"
+  },
+  "keywords": [
+    "API",
+    "Rest",
+    "NodeJs",
+    "Javascript",
+    "Mysql",
+    "Express"
+  ],
+  "author": "Filipe Viana Lacerda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/filipevl/toDoList/issues"
+  },
+  "homepage": "https://github.com/filipevl/toDoList#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  }
+}
