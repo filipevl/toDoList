@@ -30,8 +30,11 @@ Install the dependencies, set yours environment variables and start the server.
 ```sh
 cd toDoList
 npm i
+npx sequelize db:migrate
 cp .env.example .env
+cp /config/config.example.json /config/config.json
 vim .env
+vim /config/config.json
 
 ```
 
