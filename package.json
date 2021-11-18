@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/filipevl/toDoList#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1"
   }
